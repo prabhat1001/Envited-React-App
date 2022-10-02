@@ -25,7 +25,7 @@ const LandingPage = () => {
                 </SubHeadingText>
 
                 <Link to='/create'className='create-link'>
-                    <a> 🎉 Create My Event</a>
+                    <Button> 🎉 Create My Event</Button>
                 </Link>
 
             </TextContainer>
@@ -88,6 +88,26 @@ const SubHeadingText = styled.h2`
     font-size: 2rem;
     font-weight: 300;
     text-align: right;
+    
+`;
+
+const Button = styled.div`
+    background-image: linear-gradient(to right, #b700ff , #f700ff);
+    margin-left: 40%;
+    margin-top: 5%;
+    padding: 2% 8%;
+    width: 50%;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #a5a4a4;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        transform: scale(1.12);
+    }
 
 `;
 
