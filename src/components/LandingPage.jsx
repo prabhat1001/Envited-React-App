@@ -76,7 +76,7 @@ const HeadingText = styled.h1`
         color: #e00157;
     }
     line-height: 4rem;
-    padding-top: 25%;
+    padding-top: 20%;
     
 `;
 
@@ -93,14 +93,14 @@ const SubHeadingText = styled.h2`
 
 const Button = styled.div`
     background-image: linear-gradient(to right, #b700ff , #f700ff);
-    margin-left: 40%;
+    margin-left: 30%;
     margin-top: 5%;
     padding: 2% 8%;
-    width: 50%;
+    width: 60%;
     font-family: 'Poppins', sans-serif;
     color: white;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border-radius: 10px;
     box-shadow: 5px 5px 10px #a5a4a4;
     cursor: pointer;
