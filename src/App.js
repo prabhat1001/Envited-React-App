@@ -1,8 +1,10 @@
 import React from 'react'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
+// Components imported
 import LandingPage from './components/LandingPage'
 import Create from './components/Create'
+import Event from './components/Event';
 
 const App = () => {
   return (
@@ -11,6 +13,7 @@ const App = () => {
       <Routes> 
         <Route path="/" exact element={<LandingPage/>}></Route>
         <Route path ='/create' element={<Create/>}></Route> 
+        <Route path ='/event' element={<Event/>}></Route> 
         
       </Routes>
       
