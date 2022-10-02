@@ -1,27 +1,91 @@
-import React from 'react'
+import React,{ useState }  from 'react'
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import './Create.css'
 
 const Create = () => {
+
+  const [values, setValues] = useState({
+    title: '',
+    start: '',
+    end: '',
+    location: '',
+    URL: '',
+    description: '',
+  });
+
+  const handleTitleInputChange = (event) => {
+    event.persist();
+    setValues((values) => ({
+      ...values,
+      title: event.target.value,
+    }));
+  };
+
+  const handleStartInputChange = (event) => {
+    event.persist();
+    setValues((values) => ({
+      ...values,
+      start: event.target.value,
+    }));
+  };
+  
+  const handleEndInputChange = (event) => {
+    event.persist();
+    setValues((values) => ({
+      ...values,
+      end: event.target.value,
+    }));
+  };
+
+  const handleLocationInputChange = (event) => {
+    event.persist();
+    setValues((values) => ({
+      ...values,
+      end: event.target.value,
+    }));
+  };
+
+  const handleURLInputChange = (event) => {
+    event.persist();
+    setValues((values) => ({
+      ...values,
+      end: event.target.value,
+    }));
+  };
+
+  const handleDescriptionInputChange = (event) => {
+    event.persist();
+    setValues((values) => ({
+      ...values,
+      end: event.target.value,
+    }));
+  };
+    
+
   return (
     <EventContainer>
       <FormContainer>
         <Heading> Create your event </Heading>
         <Form>
+
           <Title> 🎉 My event is called </Title><br></br>
-          <Input type="text" /><br></br>
+          <Input type="text" value={values.title} onChange={handleTitleInputChange} /><br></br>
+
           <Title> 🗓️ It starts at </Title><br></br>
-          <Input type="datetime-local"  /> <br></br>
+          <Input type="datetime-local" value={values.start} onChange={handleStartInputChange} /> <br></br>
+
           <Title> 🏁 It ends at </Title><br></br>
-          <Input type="datetime-local"  /> <br></br>
+          <Input type="datetime-local" value={values.end} onChange={handleEndInputChange}/> <br></br>
+
           <Title> 📍 It's happening at <span> (optional) </span> </Title><br></br>
-          <Input type="text"  /> <br></br>
+          <Input type="text" value={values.location} onChange={handleURLInputChange}/> <br></br>
+
           <Title> 🔗 Add a URL link <span> (optional) </span> </Title><br></br>
-          <Input type="text"  /> <br></br>
+          <Input type="text" value={values.URL} onChange={handleEndInputChange}  /> <br></br>
+
           <Title> ✏️ Description <span> (optional) </span> </Title><br></br>
-          <Input type="text"  /> <br></br>
-          {/* <Button type='image'> Create Event </Button> */}
+          <Input type="text" value={values.description} onChange={handleDescriptionInputChange}  /> <br></br>
 
           <Link to='/event'className='create-link'>
                     <Button> Next 🎉 </Button>
@@ -74,6 +138,7 @@ const Title = styled.h4`
 
 const EventContainer = styled.div`
   display: flex;
+  background-color: #fffdf6;
 `;
 
 const FormContainer = styled.div`
@@ -100,7 +165,7 @@ const ImageContainer = styled.div`
   height: 80vh;
   margin-top: 20vh;
   margin-left: 2%;
-  background-image: url('./img/photo.png');
+  background-image: url('./img/uncle.gif');
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 10px;
